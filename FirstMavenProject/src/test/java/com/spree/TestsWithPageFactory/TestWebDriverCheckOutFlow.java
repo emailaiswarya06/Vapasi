@@ -62,7 +62,7 @@ public class TestWebDriverCheckOutFlow extends BaseClassTest {
             //Order Complete Status verify
             OrderCompletePage orderStatus = new OrderCompletePage(driver);
 
-            Assert.assertTrue((orderStatus.getOrderStatus()).contains("success"),"Login Message incorrect");
+            Assert.assertTrue((orderStatus.getOrderStatus()).contains("success"),"Order incomplete");
 
         }
 
