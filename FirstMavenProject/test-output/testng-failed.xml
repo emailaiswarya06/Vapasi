@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="/Users/aiswaryajayaraman/IdeaProjects/FirstMavenProject(failed)">
+    <classes>
+      <class name="com.spree.TestsWithPageFactory.TestWebDriverLoginAndLogoutUser">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="resultsReport"/>
+          <include name="logoutTest"/>
+        </methods>
+      </class> <!-- com.spree.TestsWithPageFactory.TestWebDriverLoginAndLogoutUser -->
+    </classes>
+  </test> <!-- /Users/aiswaryajayaraman/IdeaProjects/FirstMavenProject(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

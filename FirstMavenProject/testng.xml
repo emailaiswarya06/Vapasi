@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/aiswaryajayaraman/IdeaProjects/FirstMavenProject">
+        <classes>
+            <!--
+            <class name="com.spree.TestsWithPOM.TestWebDriverVerifyCartTotal">
+                <methods>
+                    <include name="testTotalCartValue"/>
+                </methods>
+            </class>
+            -->
+<!--            <class name="com.spree.TestsWithPageFactory.TestWebDriverCheckOutFlow">-->
+<!--                <methods>-->
+<!--                    <include name="loginTest"/>-->
+<!--                    <include name="checkoutFlow"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+
+            <class name="com.spree.TestsWithPageFactory.TestWebDriverLoginAndLogoutUser">
+                <methods>
+                    <include name="loginTest"/>
+                    <include name="logoutTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
