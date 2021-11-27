@@ -12,12 +12,14 @@ public class TestWebDriverLoginAndLogoutUser extends BaseClassTest {
      public void loginTest(){
         LoginPage loginPage = new LoginPage(driver);
         String loginMessageStr = loginPage.login("user1@gmail.com","Password@1");
+
         Assert.assertTrue(loginMessageStr.contains("success"),"Login Message incorrect");
     }
     @Test(priority = 2)
     public void logoutTest(){
         LogoutPage logoutPage = new LogoutPage(driver);
         logoutPage.logout();
+        //Assert.fail();
     }
 
 

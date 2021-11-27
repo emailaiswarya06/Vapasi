@@ -6,15 +6,18 @@ import org.testng.annotations.Test;
 
 public class TestWebDriverCheckOutFlow extends BaseClassTest {
 
-        @Test(priority = 1)
-        public void loginTest(){
-         LoginPage loginPage = new LoginPage(driver);
-         String loginMessageStr = loginPage.login("user2@gmail.com","Password@2");
-         Assert.assertTrue(loginMessageStr.contains("success"),"Login Message incorrect");
-        }
+//        @Test(priority = 1)
+//        public void loginTest(){
+//
+//         LoginPage loginPage = new LoginPage(driver);
+//         String loginMessageStr = loginPage.login("user2@gmail.com","Password@2");
+//         Assert.assertTrue(loginMessageStr.contains("success"),"Login Message incorrect");
+//        }
 
-        @Test(priority = 2)
+        @Test
             public void checkoutFlow(){
+            LoginPage loginPage = new LoginPage(driver);
+      String loginMessageStr = loginPage.login("user2@gmail.com","Password@2");
             CategorySelectPage categorySelect =  new CategorySelectPage(driver);
             categorySelect.selectCategoryFromSideBar();
             categorySelect.selectProduct();
@@ -51,7 +54,8 @@ public class TestWebDriverCheckOutFlow extends BaseClassTest {
 
             //get actual order total value from checkout to delivery and compare with expected value
 
-            Assert.assertEquals(checkoutDelivery.getOrderTotalDelivery(),derivedSummaryTotal);
+            //Assert.assertEquals(checkoutDelivery.getOrderTotalDelivery(),derivedSummaryTotal);
+            Assert.assertEquals(checkoutDelivery.getOrderTotalDelivery(),"X");
             checkoutDelivery.continueToPayment();
 
             //Payment Information
@@ -62,7 +66,7 @@ public class TestWebDriverCheckOutFlow extends BaseClassTest {
             //Order Complete Status verify
             OrderCompletePage orderStatus = new OrderCompletePage(driver);
 
-            Assert.assertTrue((orderStatus.getOrderStatus()).contains("success"),"Login Message incorrect");
+            Assert.assertTrue((orderStatus.getOrderStatus()).contains("success"),"Order incomplete");
 
         }
 
