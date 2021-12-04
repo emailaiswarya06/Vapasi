@@ -33,6 +33,8 @@ public class LoginPage {
          public String login(String userEmail, String password){
             emailTextBox.sendKeys(userEmail);
             passwordTextBox.sendKeys(password);
+
+
              buttonSubmit.submit();
              String loginMessageStr = loginMessage.getText();
              return loginMessageStr;

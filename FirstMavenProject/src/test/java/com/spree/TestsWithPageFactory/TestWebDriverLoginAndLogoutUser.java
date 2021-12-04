@@ -19,7 +19,7 @@ public class TestWebDriverLoginAndLogoutUser extends BaseClassTest {
     public void logoutTest(){
         LogoutPage logoutPage = new LogoutPage(driver);
         logoutPage.logout();
-        //Assert.fail();
+        Assert.fail();
     }
 
 

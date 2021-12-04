@@ -127,8 +127,8 @@ public class BaseClassTest {
 
         test.log(Status.INFO,"Testing started");
         extent.flush();
-        //driver.close();
-        //driver.quit();
+        driver.close();
+        driver.quit();
     }
 
 
